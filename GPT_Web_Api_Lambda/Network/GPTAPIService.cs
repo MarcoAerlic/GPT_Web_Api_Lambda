@@ -66,9 +66,9 @@ namespace GPT_Web_Api_Lambda.Network
             {
                 Messages = messages,
                 Model = apiModel,
-                Temperature = generateRequestModel.ModelParameters.Temperature,
-                MaxTokens = generateRequestModel.ModelParameters.MaxTokens,
-                TopP = generateRequestModel.ModelParameters.TopP,
+                Temperature = generateRequestModel.ModelParameters.Temperature != null ? generateRequestModel.ModelParameters.Temperature : 0.5,
+                MaxTokens = generateRequestModel.ModelParameters.MaxTokens != null ? generateRequestModel.ModelParameters.MaxTokens : 250,
+                TopP = generateRequestModel.ModelParameters.TopP != null ? generateRequestModel.ModelParameters.TopP : 1.0,
                 FrequencyPenalty = 0.0,
                 PresencePenalty = 0.0,
 
@@ -107,9 +107,9 @@ namespace GPT_Web_Api_Lambda.Network
             {
                 Messages = messages,
                 Model = apiModel,
-                Temperature = generateRequestModel.ModelParameters.Temperature,
-                MaxTokens = generateRequestModel.ModelParameters.MaxTokens,
-                TopP = generateRequestModel.ModelParameters.TopP,
+                Temperature = generateRequestModel.ModelParameters.Temperature != null ? generateRequestModel.ModelParameters.Temperature : 0.5,
+                MaxTokens = generateRequestModel.ModelParameters.MaxTokens != null ? generateRequestModel.ModelParameters.MaxTokens : 250,
+                TopP = generateRequestModel.ModelParameters.TopP != null ? generateRequestModel.ModelParameters.TopP : 1.0,
                 FrequencyPenalty = 0.0,
                 PresencePenalty = 0.0,
 
