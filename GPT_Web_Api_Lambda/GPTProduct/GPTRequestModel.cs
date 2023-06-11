@@ -2,7 +2,7 @@
 
 namespace GPT_Web_Api_Lambda.GPTProduct
 {
-    public class CustomerRequestModel
+    public class GPTRequestModel
     {
         public string Message { get; set; }
 

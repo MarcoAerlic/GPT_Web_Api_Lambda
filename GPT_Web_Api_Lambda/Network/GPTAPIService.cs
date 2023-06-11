@@ -8,17 +8,16 @@ namespace GPT_Web_Api_Lambda.Network
 {
     public class GPTAPIService : IGPTAPIService
     {
-        private readonly IConfiguration _configuration;
-
-        public GPTAPIService(IConfiguration configuration)
+        private readonly IConfig _config;
+        public GPTAPIService(IConfig config)
         {
-            _configuration = configuration;
+            _config = config;
         }
 
         public async Task<List<string>> GenerateContentDaVinciAPI(GPTGenerateRequestModelDTO generateRequestModel)
         {
             var apiKey = "";
-            var apiModel = "text-davinci-003";
+            var apiModel = _config.GptDavinci;
             List<string> rq = new List<string>();
             string rs = "";
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
@@ -48,7 +47,7 @@ namespace GPT_Web_Api_Lambda.Network
         public async Task<List<string>> GenerateContentGptTurboAPI(GPTChatInput generateRequestModel)
         {
             var apiKey = "";
-            var apiModel = "gpt-3.5-turbo";
+            var apiModel = _config.GptTurbo;
             List<string> rq = new List<string>();
             string rs = "";
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
@@ -88,7 +87,7 @@ namespace GPT_Web_Api_Lambda.Network
         public async Task<List<string>> GenerateContentGpt4API(GPTChatInput generateRequestModel)
         {
             var apiKey = "";
-            var apiModel = "gpt-4";
+            var apiModel = _config.GptFour;
 
             List<string> rq = new List<string>();
             string rs = "";

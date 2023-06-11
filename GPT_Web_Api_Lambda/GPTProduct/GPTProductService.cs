@@ -13,7 +13,7 @@ namespace GPT_Web_Api_Lambda.GPTProduct
 
         }
 
-        public async Task<GPTProductResponseModel> GenerateContentDaVinci(CustomerRequestModel gptGenerateRequestModel)
+        public async Task<GPTProductResponseModel> GenerateContentDaVinci(GPTRequestModel gptGenerateRequestModel)
         {
             if (string.IsNullOrEmpty(gptGenerateRequestModel.Message))
             {
@@ -47,7 +47,7 @@ namespace GPT_Web_Api_Lambda.GPTProduct
 
         public async Task<GPTProductResponseModel> GenerateContentGptTurbo(GPTChatInput gptGenerateRequestModel)
         {
-            if (!(gptGenerateRequestModel != null))
+            if (gptGenerateRequestModel == null)
             {
                 return new GPTProductResponseModel
                 {
@@ -76,7 +76,7 @@ namespace GPT_Web_Api_Lambda.GPTProduct
 
         public async Task<GPTProductResponseModel> GenerateContentGpt4(GPTChatInput gptGenerateRequestModel)
         {
-            if (!(gptGenerateRequestModel != null))
+            if (gptGenerateRequestModel == null)
             {
                 return new GPTProductResponseModel
                 {

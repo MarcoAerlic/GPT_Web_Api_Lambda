@@ -51,7 +51,7 @@ namespace GPT_Web_Api_Lambda.Controllers
         }
 
         [HttpPost("ExtractDataDavinci")]
-        public async Task<ActionResult<GPTProductResponseModel>> GenerateContentDaVinci([FromBody] CustomerRequestModel aDGenerateRequestModel)
+        public async Task<ActionResult<GPTProductResponseModel>> GenerateContentDaVinci([FromBody] GPTRequestModel aDGenerateRequestModel)
         {
             try
             {

@@ -1,30 +1,37 @@
 using GPT_Web_Api_Lambda.GPTProduct;
 using GPT_Web_Api_Lambda.Interfaces;
 using GPT_Web_Api_Lambda.Network;
+using GPT_Web_Api_Lambda.Configuration;
 
 namespace GPT_Web_Api_Lambda
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IWebHostEnvironment _env;
+        public IConfiguration Configuration { get; }
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
+            var deployment = Enum.Parse<Deployment>(_env.EnvironmentName, true);
+            var config = new Config(deployment);
             services.AddControllers();
             services.AddTransient<IGPTProductService, GPTProductService>();
             services.AddTransient<IGPTAPIService, GPTAPIService>();
             services.AddSwaggerGen();
+            services.AddConfig(deployment);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

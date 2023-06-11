@@ -5,7 +5,7 @@ namespace GPT_Web_Api_Lambda.Interfaces
 {
     public interface IGPTProductService
     {
-        Task<GPTProductResponseModel> GenerateContentDaVinci(CustomerRequestModel gptGenerateRequestModel);
+        Task<GPTProductResponseModel> GenerateContentDaVinci(GPTRequestModel gptGenerateRequestModel);
         Task<GPTProductResponseModel> GenerateContentGptTurbo(GPTChatInput gptGenerateRequestModel);
         Task<GPTProductResponseModel> GenerateContentGpt4(GPTChatInput gptGenerateRequestModel);
     }
