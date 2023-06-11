@@ -47,7 +47,7 @@ namespace GPT_Web_Api_Lambda.Network
 
         public async Task<List<string>> GenerateContentGptTurboAPI(GPTChatInput generateRequestModel)
         {
-            var apiKey = "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";
+            var apiKey = "";
             var apiModel = "gpt-3.5-turbo";
             List<string> rq = new List<string>();
             string rs = "";

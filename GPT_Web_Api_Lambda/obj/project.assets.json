@@ -1491,11 +1491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
+      "projectUniqueName": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_SINGLE_PROJECT_LAMBDA\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
       "projectName": "GPT_Web_Api_Lambda",
-      "projectPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
+      "projectPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_SINGLE_PROJECT_LAMBDA\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
       "packagesPath": "C:\\Users\\MarcoAerlic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\obj\\",
+      "outputPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_SINGLE_PROJECT_LAMBDA\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
