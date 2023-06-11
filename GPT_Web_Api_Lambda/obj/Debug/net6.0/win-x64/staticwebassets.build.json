@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aBFxU1I06sJi5UMWEmMlOMstsF72x/Y/EPxTnKv0678=",
+  "Source": "GPT_Web_Api_Lambda",
+  "BasePath": "_content/GPT_Web_Api_Lambda",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
