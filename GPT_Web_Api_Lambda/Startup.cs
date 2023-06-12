@@ -19,8 +19,8 @@ namespace GPT_Web_Api_Lambda
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
-            var deployment = Enum.Parse<Deployment>(_env.EnvironmentName, true);
-            var config = new Config(deployment);
+            var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Development";
+            var deployment = Enum.Parse<Deployment>(env, true);
             services.AddControllers();
             services.AddTransient<IGPTProductService, GPTProductService>();
             services.AddTransient<IGPTAPIService, GPTAPIService>();
@@ -31,7 +31,6 @@ namespace GPT_Web_Api_Lambda
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

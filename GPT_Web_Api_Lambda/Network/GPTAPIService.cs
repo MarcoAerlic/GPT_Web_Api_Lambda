@@ -49,7 +49,6 @@ namespace GPT_Web_Api_Lambda.Network
             var apiKey = "";
             var apiModel = _config.GptTurbo;
             List<string> rq = new List<string>();
-            string rs = "";
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
 
             //GPT models use a different strusture when formatting the request (in comparison to davinci model)
@@ -90,7 +89,6 @@ namespace GPT_Web_Api_Lambda.Network
             var apiModel = _config.GptFour;
 
             List<string> rq = new List<string>();
-            string rs = "";
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
 
             //GPT models use a different strusture when formatting the request (in comparison to davinci model)

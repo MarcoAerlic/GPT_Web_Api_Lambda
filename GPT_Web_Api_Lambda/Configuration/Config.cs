@@ -10,11 +10,10 @@ namespace GPT_Web_Api_Lambda.Configuration
 
         public Config(Deployment deployment)
         {
-            var builder = new ConfigurationBuilder()
-                   .SetBasePath(AppContext.BaseDirectory)
-                   .AddJsonFile($"appsettings.{deployment}.json", optional: true)
-                   .AddEnvironmentVariables()
-               ;
+            var builder = new ConfigurationBuilder();
+
+            builder.AddJsonFile($"appsettings.{deployment}.json", optional: true);
+
             _deployment = deployment;
             _configuration = builder.Build();
         }
