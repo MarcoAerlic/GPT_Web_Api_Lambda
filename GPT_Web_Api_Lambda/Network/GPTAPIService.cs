@@ -65,9 +65,9 @@ namespace GPT_Web_Api_Lambda.Network
             {
                 Messages = messages,
                 Model = apiModel,
-                Temperature = generateRequestModel.ModelParameters.Temperature != null ? generateRequestModel.ModelParameters.Temperature : 0.5,
-                MaxTokens = generateRequestModel.ModelParameters.MaxTokens != null ? generateRequestModel.ModelParameters.MaxTokens : 250,
-                TopP = generateRequestModel.ModelParameters.TopP != null ? generateRequestModel.ModelParameters.TopP : 1.0,
+                Temperature = generateRequestModel.ModelParameters.Temperature != 0.0 ? generateRequestModel.ModelParameters.Temperature : 0.5,
+                MaxTokens = generateRequestModel.ModelParameters.MaxTokens != 0 ? generateRequestModel.ModelParameters.MaxTokens : 250,
+                TopP = generateRequestModel.ModelParameters.TopP != 0.0 ? generateRequestModel.ModelParameters.TopP : 1.0,
                 FrequencyPenalty = 0.0,
                 PresencePenalty = 0.0,
 
@@ -106,9 +106,9 @@ namespace GPT_Web_Api_Lambda.Network
             {
                 Messages = messages,
                 Model = apiModel,
-                Temperature = generateRequestModel.ModelParameters.Temperature != null ? generateRequestModel.ModelParameters.Temperature : 0.5,
-                MaxTokens = generateRequestModel.ModelParameters.MaxTokens != null ? generateRequestModel.ModelParameters.MaxTokens : 250,
-                TopP = generateRequestModel.ModelParameters.TopP != null ? generateRequestModel.ModelParameters.TopP : 1.0,
+                Temperature = generateRequestModel.ModelParameters.Temperature != 0.0 ? generateRequestModel.ModelParameters.Temperature : 0.5,
+                MaxTokens = generateRequestModel.ModelParameters.MaxTokens != 0 ? generateRequestModel.ModelParameters.MaxTokens : 250,
+                TopP = generateRequestModel.ModelParameters.TopP != 0.0 ? generateRequestModel.ModelParameters.TopP : 1.0,
                 FrequencyPenalty = 0.0,
                 PresencePenalty = 0.0,
 
