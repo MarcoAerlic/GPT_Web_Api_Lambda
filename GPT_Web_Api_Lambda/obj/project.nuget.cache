@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FW4tLwcL1SCj+pAnORDRWY4Hc6q+z3XGsY4m/KCQB0spCokPkkEt4qLLUYJpnvU/7cZUKepnKoaFdY61lgYWyw==",
+  "dgSpecHash": "LbXv/2Jc0nu+teqYcw4uKJQ3e+sEh/zG9n601r6eQQsTWApHD9pKZflBLOX0ddxlCvYsRyPRn5dQaKwJCouLZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_1\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
   "expectedPackageFiles": [
@@ -30,10 +30,10 @@
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\6.0.13\\microsoft.netcore.app.runtime.linux-x64.6.0.13.nupkg.sha512",
+    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.13\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.13.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.13\\microsoft.netcore.app.crossgen2.win-x64.6.0.13.nupkg.sha512",
-    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.13\\microsoft.aspnetcore.app.runtime.win-x64.6.0.13.nupkg.sha512",
-    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.13\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.13.nupkg.sha512",
-    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.13\\microsoft.netcore.app.runtime.win-x64.6.0.13.nupkg.sha512"
+    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.13\\microsoft.netcore.app.host.linux-x64.6.0.13.nupkg.sha512"
   ],
   "logs": []
 }

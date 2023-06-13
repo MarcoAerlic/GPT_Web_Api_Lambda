@@ -396,7 +396,7 @@
         }
       }
     },
-    "net6.0/win-x64": {
+    "net6.0/linux-x64": {
       "Amazon.Lambda.APIGatewayEvents/2.6.0": {
         "type": "package",
         "compile": {
@@ -1555,7 +1555,7 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
             "version": "[6.0.13, 6.0.13]"
           },
           {
@@ -1563,11 +1563,11 @@
             "version": "[6.0.13, 6.0.13]"
           },
           {
-            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
             "version": "[6.0.13, 6.0.13]"
           },
           {
-            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
             "version": "[6.0.13, 6.0.13]"
           }
         ],
@@ -1583,7 +1583,7 @@
       }
     },
     "runtimes": {
-      "win-x64": {
+      "linux-x64": {
         "#import": []
       }
     }

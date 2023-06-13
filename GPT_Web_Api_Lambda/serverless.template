@@ -2,12 +2,19 @@
   "AWSTemplateFormatVersion": "2010-09-09",
   "Transform": "AWS::Serverless-2016-10-31",
   "Description": "An AWS Serverless Application that uses the ASP.NET Core framework running in Amazon Lambda.",
-  "Parameters": {},
+  "Parameters": {
+    "Environment": {
+        "Description": "Environment Name",
+        "Type": "String",
+        "Default": "Prod"
+        }
+  },
   "Conditions": {},
   "Resources": {
     "AspNetCoreFunction": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
+        "FunctionName": {"Fn::Sub": "GPT-Poc-${Environment}"},
         "Handler": "GPT_Web_Api_Lambda::GPT_Web_Api_Lambda.LambdaEntryPoint::FunctionHandlerAsync",
         "Runtime": "dotnet6",
         "CodeUri": "",
@@ -40,7 +47,7 @@
     "ApiURL": {
       "Description": "API endpoint URL for Prod environment",
       "Value": {
-        "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+        "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/${Environment}/"
       }
     }
   }

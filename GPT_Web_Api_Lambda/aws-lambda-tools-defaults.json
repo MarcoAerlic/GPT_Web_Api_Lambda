@@ -9,9 +9,9 @@
     "profile"     : "programmaticUser",
     "region"      : "ap-southeast-2",
     "configuration" : "Release",
-    "s3-prefix"     : "GPT_Web_Api_Lambda/",
+    "s3-prefix"     : "GPT_Web_Api_Lambda_Prod/",
     "template"      : "serverless.template",
     "template-parameters" : "",
     "s3-bucket"           : "gptpocsthreebucket",
-    "stack-name"          : "GptWebAPiPoc"
+    "stack-name"          : "GptWebAPiPocProd"
 }

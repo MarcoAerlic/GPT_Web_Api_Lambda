@@ -7,7 +7,6 @@ namespace GPT_Web_Api_Lambda.Interfaces
     {
         Task<List<string>> GenerateContentDaVinciAPI(GPTGenerateRequestModelDTO generateRequestModel);
         Task<List<string>> GenerateContentGptTurboAPI(GPTChatInput generateRequestModel);
-
         Task<List<string>> GenerateContentGpt4API(GPTChatInput generateRequestModel);
     }
 }
