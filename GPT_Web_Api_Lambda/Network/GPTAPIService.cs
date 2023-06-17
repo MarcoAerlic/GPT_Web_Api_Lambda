@@ -3,6 +3,7 @@ using GPT_Web_Api_Lambda.GPTProduct;
 using GPT_Web_Api_Lambda.Interfaces;
 using OpenAI_API;
 using OpenAI_API.Chat;
+using OpenAI_API.Models;
 
 namespace GPT_Web_Api_Lambda.Network
 {
@@ -16,8 +17,11 @@ namespace GPT_Web_Api_Lambda.Network
 
         public async Task<List<string>> GenerateContentDaVinciAPI(GPTGenerateRequestModelDTO generateRequestModel)
         {
-            var apiKey = "";
-            var apiModel = _config.GptDavinci;
+            //If you are testing locally replace with the test Open Ai api key value.
+            //You will be able to get it from the evironment variable section of 
+            //the gpt test lambda function page/ui.
+            var apiKey = Environment.GetEnvironmentVariable("Open_Ai_Api_Key");
+
             List<string> rq = new List<string>();
             string rs = "";
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
@@ -25,7 +29,7 @@ namespace GPT_Web_Api_Lambda.Network
             var completionRequest = new OpenAI_API.Completions.CompletionRequest()
             {
                 Prompt = generateRequestModel.prompt,
-                Model = apiModel,
+                Model = Model.DavinciText,
                 Temperature = 0.5,
                 MaxTokens = 500,
                 TopP = 1.0,
@@ -46,8 +50,11 @@ namespace GPT_Web_Api_Lambda.Network
 
         public async Task<List<string>> GenerateContentGptTurboAPI(GPTChatInput generateRequestModel)
         {
-            var apiKey = "";
-            var apiModel = _config.GptTurbo;
+            //If you are testing locally replace with the test Open Ai api key value.
+            //You will be able to get it from the evironment variable section of 
+            //the gpt test lambda function page/ui.
+            var apiKey = Environment.GetEnvironmentVariable("Open_Ai_Api_Key");
+
             List<string> rq = new List<string>();
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
 
@@ -63,7 +70,7 @@ namespace GPT_Web_Api_Lambda.Network
             var chatRequest = new ChatRequest()
             {
                 Messages = messages,
-                Model = apiModel,
+                Model = Model.ChatGPTTurbo,
                 Temperature = generateRequestModel.ModelParameters.Temperature != 0.0 ? generateRequestModel.ModelParameters.Temperature : 0.5,
                 MaxTokens = generateRequestModel.ModelParameters.MaxTokens != 0 ? generateRequestModel.ModelParameters.MaxTokens : 250,
                 TopP = generateRequestModel.ModelParameters.TopP != 0.0 ? generateRequestModel.ModelParameters.TopP : 1.0,
@@ -85,8 +92,10 @@ namespace GPT_Web_Api_Lambda.Network
 
         public async Task<List<string>> GenerateContentGpt4API(GPTChatInput generateRequestModel)
         {
-            var apiKey = "";
-            var apiModel = _config.GptFour;
+            //If you are testing locally replace with the test Open Ai api key value.
+            //You will be able to get it from the evironment variable section of 
+            //the gpt test lambda function page/ui.
+            var apiKey = Environment.GetEnvironmentVariable("Open_Ai_Api_Key");
 
             List<string> rq = new List<string>();
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
@@ -103,7 +112,7 @@ namespace GPT_Web_Api_Lambda.Network
             var chatRequest = new ChatRequest()
             {
                 Messages = messages,
-                Model = apiModel,
+                Model = Model.GPT4,
                 Temperature = generateRequestModel.ModelParameters.Temperature != 0.0 ? generateRequestModel.ModelParameters.Temperature : 0.5,
                 MaxTokens = generateRequestModel.ModelParameters.MaxTokens != 0 ? generateRequestModel.ModelParameters.MaxTokens : 250,
                 TopP = generateRequestModel.ModelParameters.TopP != 0.0 ? generateRequestModel.ModelParameters.TopP : 1.0,

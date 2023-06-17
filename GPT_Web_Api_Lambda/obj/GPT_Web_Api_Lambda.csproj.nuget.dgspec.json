@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_1\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj": {}
+    "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_17_06_2023\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_1\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj": {
+    "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_17_06_2023\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_1\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
+        "projectUniqueName": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_17_06_2023\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
         "projectName": "GPT_Web_Api_Lambda",
-        "projectPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_1\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
+        "projectPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_17_06_2023\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
         "packagesPath": "C:\\Users\\MarcoAerlic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_1\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\obj\\",
+        "outputPath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_17_06_2023\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,7 +71,7 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
               "version": "[6.0.13, 6.0.13]"
             },
             {
@@ -79,11 +79,11 @@
               "version": "[6.0.13, 6.0.13]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
               "version": "[6.0.13, 6.0.13]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[6.0.13, 6.0.13]"
             }
           ],
@@ -99,7 +99,7 @@
         }
       },
       "runtimes": {
-        "linux-x64": {
+        "win-x64": {
           "#import": []
         }
       }

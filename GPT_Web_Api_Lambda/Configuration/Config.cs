@@ -20,10 +20,6 @@ namespace GPT_Web_Api_Lambda.Configuration
 
         public Deployment Deployment => _deployment;
 
-        public string GptTurbo => GetConfig(new[] { "GptModel", "GptTurbo" });
-        public string GptFour => GetConfig(new[] { "GptModel", "GptFour" });
-        public string GptDavinci => GetConfig(new[] { "GptModel", "GptDavinci" });
-
         public string GetConfig(string[] args) => _configuration[$"{string.Join(":", args)}"];
 
     }

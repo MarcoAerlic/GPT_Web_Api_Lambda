@@ -7,9 +7,6 @@ namespace GPT_Web_Api_Lambda.Interfaces
     public interface IConfig
     {
         Deployment Deployment { get; }
-        public string GptTurbo { get; }
-        public string GptFour { get; }
-        public string GptDavinci { get; }
 
     }
 }
