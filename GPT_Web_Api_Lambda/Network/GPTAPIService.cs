@@ -10,9 +10,13 @@ namespace GPT_Web_Api_Lambda.Network
     public class GPTAPIService : IGPTAPIService
     {
         private readonly IConfig _config;
-        public GPTAPIService(IConfig config)
+        private readonly IAmazonSystemsManagementClient _ssmClient;
+        readonly string openAiApiKey = Environment.GetEnvironmentVariable("Open_Ai_Api_Key");
+
+        public GPTAPIService(IConfig config, IAmazonSystemsManagementClient ssmClient)
         {
             _config = config;
+            _ssmClient = ssmClient;
         }
 
         public async Task<List<string>> GenerateContentDaVinciAPI(GPTGenerateRequestModelDTO generateRequestModel)
@@ -20,19 +24,18 @@ namespace GPT_Web_Api_Lambda.Network
             //If you are testing locally replace with the test Open Ai api key value.
             //You will be able to get it from the evironment variable section of 
             //the gpt test lambda function page/ui.
-            var apiKey = Environment.GetEnvironmentVariable("Open_Ai_Api_Key");
+            var apiKey = await _ssmClient.GetParameterAsync(openAiApiKey);
 
             List<string> rq = new List<string>();
-            string rs = "";
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
 
             var completionRequest = new OpenAI_API.Completions.CompletionRequest()
             {
                 Prompt = generateRequestModel.prompt,
                 Model = Model.DavinciText,
-                Temperature = 0.5,
-                MaxTokens = 500,
-                TopP = 1.0,
+                Temperature = generateRequestModel.ModelParameters.Temperature != 0.0 ? generateRequestModel.ModelParameters.Temperature : 0.5,
+                MaxTokens = generateRequestModel.ModelParameters.MaxTokens != 0 ? generateRequestModel.ModelParameters.MaxTokens : 250,
+                TopP = generateRequestModel.ModelParameters.TopP != 0.0 ? generateRequestModel.ModelParameters.TopP : 1.0,
                 FrequencyPenalty = 0.0,
                 PresencePenalty = 0.0,
 
@@ -53,7 +56,7 @@ namespace GPT_Web_Api_Lambda.Network
             //If you are testing locally replace with the test Open Ai api key value.
             //You will be able to get it from the evironment variable section of 
             //the gpt test lambda function page/ui.
-            var apiKey = Environment.GetEnvironmentVariable("Open_Ai_Api_Key");
+            var apiKey = await _ssmClient.GetParameterAsync(openAiApiKey);
 
             List<string> rq = new List<string>();
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));
@@ -95,7 +98,7 @@ namespace GPT_Web_Api_Lambda.Network
             //If you are testing locally replace with the test Open Ai api key value.
             //You will be able to get it from the evironment variable section of 
             //the gpt test lambda function page/ui.
-            var apiKey = Environment.GetEnvironmentVariable("Open_Ai_Api_Key");
+            var apiKey = await _ssmClient.GetParameterAsync(openAiApiKey);
 
             List<string> rq = new List<string>();
             OpenAIAPI api = new OpenAIAPI(new APIAuthentication(apiKey));

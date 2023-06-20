@@ -19,5 +19,8 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\MarcoAerlic\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\MarcoAerlic\.nuget\packages\awssdk.core\3.7.107.7</PkgAWSSDK_Core>
+    <PkgAWSSDK_SimpleSystemsManagement Condition=" '$(PkgAWSSDK_SimpleSystemsManagement)' == '' ">C:\Users\MarcoAerlic\.nuget\packages\awssdk.simplesystemsmanagement\3.7.104.49</PkgAWSSDK_SimpleSystemsManagement>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\MarcoAerlic\.nuget\packages\awssdk.s3\3.7.106</PkgAWSSDK_S3>
   </PropertyGroup>
 </Project>

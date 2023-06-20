@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OwJdplk+HBltU7KrGybgISHrRo+t76cjTZ4TsBb9AGL2mP6dd3Dzt8vXQAa1sT434PB2dqQvr1shQcc8M4Vh5Q==",
+  "dgSpecHash": "wwWSBPTCr94sfGRk3Utw/iePlUJ9iWIFKldZ33MvW6WVnIIa1BRBzDKvJF1/kk3BsBpjOfHI8XxUj5RDtygs/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_17_06_2023\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
+  "projectFilePath": "C:\\Users\\MarcoAerlic\\source\\repos\\GPT_Personal\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda\\GPT_Web_Api_Lambda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\amazon.lambda.apigatewayevents\\2.6.0\\amazon.lambda.apigatewayevents.2.6.0.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\amazon.lambda.applicationloadbalancerevents\\2.1.0\\amazon.lambda.applicationloadbalancerevents.2.1.0.nupkg.sha512",
@@ -10,6 +10,9 @@
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\amazon.lambda.core\\2.1.0\\amazon.lambda.core.2.1.0.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\amazon.lambda.logging.aspnetcore\\3.1.0\\amazon.lambda.logging.aspnetcore.3.1.0.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.3.1\\amazon.lambda.serialization.systemtextjson.2.3.1.nupkg.sha512",
+    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\awssdk.core\\3.7.107.7\\awssdk.core.3.7.107.7.nupkg.sha512",
+    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\awssdk.s3\\3.7.106\\awssdk.s3.3.7.106.nupkg.sha512",
+    "C:\\Users\\MarcoAerlic\\.nuget\\packages\\awssdk.simplesystemsmanagement\\3.7.104.49\\awssdk.simplesystemsmanagement.3.7.104.49.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\MarcoAerlic\\.nuget\\packages\\microsoft.extensions.configuration\\2.1.0\\microsoft.extensions.configuration.2.1.0.nupkg.sha512",

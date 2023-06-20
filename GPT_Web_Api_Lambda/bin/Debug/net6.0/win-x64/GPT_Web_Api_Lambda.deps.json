@@ -9,6 +9,8 @@
     ".NETCoreApp,Version=v6.0/win-x64": {
       "GPT_Web_Api_Lambda/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.7.106",
+          "AWSSDK.SimpleSystemsManagement": "3.7.104.49",
           "Amazon.Lambda.AspNetCoreServer": "8.1.0",
           "OpenAI": "1.7.2",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -1453,6 +1455,36 @@
           }
         }
       },
+      "AWSSDK.Core/3.7.107.7": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.107.7"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.106": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.107.7"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.106.0"
+          }
+        }
+      },
+      "AWSSDK.SimpleSystemsManagement/3.7.104.49": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.107.7"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleSystemsManagement.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.104.49"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -1634,6 +1666,27 @@
       "sha512": "sha512-7dGGgikMlEz72rGqeDwQEIxq+O8RDEdR4GH2S7hfZ8uzv5lyWVDuP2urV6MyD6APJ2WVHRwJlV74bB+XJncQpw==",
       "path": "amazon.lambda.serialization.systemtextjson/2.3.1",
       "hashPath": "amazon.lambda.serialization.systemtextjson.2.3.1.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.7.107.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NFY7Qe3uKEadoXtzBO76+qNgAdbWc0A8SCRznIQKLo78LYRyc9kgBmBQEzwqcgXf69xxsi6BBq1FbExyRnZbpQ==",
+      "path": "awssdk.core/3.7.107.7",
+      "hashPath": "awssdk.core.3.7.107.7.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.106": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q37HV2lmg5l1l4eF/2RNOW34IE28p5ajzfjTdAnCZZmoKBj7dQc4nfzI5x3IXb9/P0Mbu5DdyZ4BqvGqMBTgbQ==",
+      "path": "awssdk.s3/3.7.106",
+      "hashPath": "awssdk.s3.3.7.106.nupkg.sha512"
+    },
+    "AWSSDK.SimpleSystemsManagement/3.7.104.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PpSzDOaooI3QFmlfqJ+9FKOhKuQq7SVl45ze7NjpqaLvQVagh18YWJ1Wcsl9OTJKPW4c+/hvyrzetjXDr6aTyQ==",
+      "path": "awssdk.simplesystemsmanagement/3.7.104.49",
+      "hashPath": "awssdk.simplesystemsmanagement.3.7.104.49.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

@@ -2,6 +2,7 @@ using GPT_Web_Api_Lambda.GPTProduct;
 using GPT_Web_Api_Lambda.Interfaces;
 using GPT_Web_Api_Lambda.Network;
 using GPT_Web_Api_Lambda.Configuration;
+using GPT_Web_Api_Lambda.AWSSSM;
 
 namespace GPT_Web_Api_Lambda
 {
@@ -22,6 +23,7 @@ namespace GPT_Web_Api_Lambda
             var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Development";
             var deployment = Enum.Parse<Deployment>(env, true);
             services.AddControllers();
+            services.AddTransient<IAmazonSystemsManagementClient, AmazonSystemsManagementClient>();
             services.AddTransient<IGPTProductService, GPTProductService>();
             services.AddTransient<IGPTAPIService, GPTAPIService>();
             services.AddSwaggerGen();
